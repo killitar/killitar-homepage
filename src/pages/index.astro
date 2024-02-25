@@ -1,9 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import getRandomTheme from '../utils/getRandomTheme.ts';
+import listThemes from '../data/listThemes.json';
+
+const initialTheme = getRandomTheme(listThemes);
 ---
 
-<Layout title="Killitar homepage">
-  <main></main>
+<Layout initialTheme={initialTheme} title="Miroslav Lincovsci">
+  <div
+    class="h-screen w-screen bg-background px-8 py-14 delay-75 duration-300 ease-in-out md:px-24"
+  >
+    <header></header>
+    <main></main>
+    <footer></footer>
+  </div>
 </Layout>
 
 <style></style>
