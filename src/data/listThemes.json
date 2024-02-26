@@ -1,10 +1,10 @@
 [
   {
     "id": 0,
-    "themeName": "gruvbox-dark"
+    "name": "gruvbox-dark"
   },
   {
     "id": 0,
-    "themeName": "solarized-dark"
+    "name": "solarized-dark"
   }
 ]
