@@ -3,11 +3,11 @@ import { ref } from 'vue';
 import listThemes from '../data/listThemes.json';
 
 const props = defineProps<{
-  initialTheme: string;
+  initialThemeName: string;
 }>();
 
 const isThemeListDropdownVisible = ref(false);
-const currentTheme = ref(props.initialTheme);
+const currentTheme = ref(props.initialThemeName);
 
 const toggleThemeListDropdownVisible = (): void => {
   isThemeListDropdownVisible.value = !isThemeListDropdownVisible.value;
@@ -21,6 +21,7 @@ const selectTheme = (theme: string): void => {
     document.body.classList.add(selectedClassTheme);
 
     currentTheme.value = selectedClassTheme;
+    toggleThemeListDropdownVisible();
   }
 };
 </script>
