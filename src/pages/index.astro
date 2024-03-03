@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ThemeButton from '@components/ThemeButton.vue';
+import AboutMe from '@components/AboutMe.vue';
+import SocialLinks from '@components/SocialLinks.vue';
 import getRandomTheme from '../utils/getRandomTheme.ts';
 import listThemes from '../data/listThemes.json';
 
@@ -11,10 +13,16 @@ const initialTheme = getRandomTheme(listThemes);
   <div
     class="h-screen w-screen bg-background px-8 py-14 delay-75 duration-300 ease-in-out md:px-24"
   >
-    <header>
-      <ThemeButton initialTheme={initialTheme} client:load />
+    <header class="mb-36">
+      <ThemeButton initialThemeName={initialTheme} client:load />
     </header>
-    <main></main>
+    <main class="flex">
+      <div class="w-1/2">
+        <AboutMe class="mb-10" />
+        <SocialLinks />
+      </div>
+      <div></div>
+    </main>
     <footer></footer>
   </div>
 </Layout>
