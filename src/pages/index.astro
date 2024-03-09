@@ -4,6 +4,7 @@ import ThemeButton from '@components/ThemeButton.vue';
 import AboutMe from '@components/AboutMe.vue';
 import SocialLinks from '@components/SocialLinks.vue';
 import ProjectsAccordion from '@components/ProjectsAccordion.vue';
+import Footer from '@components/Footer.vue';
 import getRandomTheme from '../utils/getRandomTheme.ts';
 import listThemes from '../data/listThemes.json';
 
@@ -12,7 +13,7 @@ const initialTheme = getRandomTheme(listThemes);
 
 <Layout initialTheme={initialTheme} title="Miroslav Lincovsci">
   <div
-    class="h-screen w-screen bg-background px-8 py-14 delay-75 duration-300 ease-in-out md:px-24"
+    class="min-w-screen min-h-screen bg-background px-8 py-14 delay-75 duration-300 ease-in-out md:px-24"
   >
     <header class="mb-36">
       <ThemeButton initialThemeName={initialTheme} client:load />
@@ -26,7 +27,9 @@ const initialTheme = getRandomTheme(listThemes);
         <ProjectsAccordion />
       </div>
     </main>
-    <footer></footer>
+    <footer class="absolute bottom-1 left-1/2 -translate-x-1/2">
+      <Footer />
+    </footer>
   </div>
 </Layout>
 
