@@ -3,7 +3,6 @@ import listProjects from '../data/listProjects.json';
 import { ref } from 'vue';
 
 const isAccordionOpen = ref<boolean>(false);
-
 const toggleAccordionOpen = (): void => {
   isAccordionOpen.value = !isAccordionOpen.value;
 };
