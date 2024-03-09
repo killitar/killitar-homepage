@@ -38,6 +38,13 @@ export default {
         'secondary-variant': '#00222b',
         background: '#002b36',
       },
+      catppuccin: {
+        primary: '#abe9b3',
+        'primary-variant': '#575268',
+        secondary: '#d9e0ee',
+        'secondary-variant': '#292739',
+        background: '#1e1e2e',
+      },
     }),
   ],
 };

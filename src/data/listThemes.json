@@ -4,7 +4,11 @@
     "name": "gruvbox-dark"
   },
   {
-    "id": 0,
+    "id": 1,
     "name": "solarized-dark"
+  },
+  {
+    "id": 2,
+    "name": "catppuccin"
   }
 ]
