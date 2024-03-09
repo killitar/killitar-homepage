@@ -3,7 +3,23 @@ const { createThemes } = require('tw-colors');
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        slideIn: 'slideIn 0.5s ease-out',
+        fadeIn: 'fadeIn 1.5s ease-in',
+      },
+      keyframes: {
+        slideIn: {
+          '0%': { opacity: 0, transform: 'translateX(-2rem)' },
+          '50%': { opacity: 50 },
+          '100%': { opacity: 100 },
+        },
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 100 },
+        },
+      },
+    },
   },
   plugins: [
     createThemes({
