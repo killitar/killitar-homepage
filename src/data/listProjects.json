@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "name": "sky-cast",
+    "html_url": "https://github.com/Killitar/sky-cast",
+    "description": "a weather app builded with vue & tauri",
+    "language": "vue3 / typescript / tailwindcss"
+  },
+  {
+    "id": 1,
+    "name": "killitar-portfolio",
+    "html_url": "https://github.com/Killitar/killitar-homepage",
+    "description": "a personal portfolio",
+    "language": "vue3 / astro / typescript / tailwindcss"
+  }
+]
