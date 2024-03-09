@@ -3,6 +3,7 @@
     <a
       href="https://github.com/Killitar"
       class="group mr-5 flex cursor-pointer items-center text-primary-variant duration-300 hover:text-secondary"
+      target="_blank"
     >
       <svg
         width="21"

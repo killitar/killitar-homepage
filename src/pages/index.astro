@@ -13,18 +13,18 @@ const initialTheme = getRandomTheme(listThemes);
 
 <Layout initialTheme={initialTheme} title="Miroslav Lincovsci">
   <div
-    class="min-w-screen min-h-screen bg-background px-8 py-14 delay-75 duration-300 ease-in-out md:px-24"
+    class="min-w-screen min-h-screen bg-background px-8 py-14 delay-75 duration-300 ease-in-out xl:px-40"
   >
     <header class="mb-36">
       <ThemeButton initialThemeName={initialTheme} client:load />
     </header>
     <main class="flex">
-      <div class="mr-24 w-1/2">
+      <div class="xl:mr-24 xl:w-1/2">
         <AboutMe class="mb-10 duration-300" />
         <SocialLinks />
       </div>
-      <div class="w-1/2">
-        <ProjectsAccordion />
+      <div class="xl:w-1/2">
+        <ProjectsAccordion client:load />
       </div>
     </main>
     <footer class="absolute bottom-1 left-1/2 -translate-x-1/2">
