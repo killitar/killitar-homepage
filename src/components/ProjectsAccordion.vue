@@ -11,6 +11,7 @@ const toggleAccordionOpen = (): void => {
 <template>
   <button
     @click="toggleAccordionOpen"
+    type="button"
     class="group mb-4 flex min-w-full items-center justify-between"
   >
     <p class="text-4xl text-primary duration-300 group-hover:text-secondary">
@@ -38,7 +39,10 @@ const toggleAccordionOpen = (): void => {
     enter-from-class="opacity-0"
     enter-active-class="transition duration-700"
   >
-    <div class="overscroll-contain" v-if="isAccordionOpen">
+    <div
+      class="scrollbar-hide h-4/5 overflow-y-auto overscroll-y-none scroll-smooth"
+      v-if="isAccordionOpen"
+    >
       <div
         class="mb-3 flex flex-col rounded-lg border-2 border-primary p-3 last:mb-0"
         v-for="project in listProjects"
@@ -67,11 +71,24 @@ const toggleAccordionOpen = (): void => {
           <div
             class="mr-1 h-2 w-2 rounded-full bg-secondary duration-300"
           ></div>
-          <span class="text-primary-variant duration-300">
-            {{ project.language }}</span
-          >
+          <p class="text-primary-variant duration-300">
+            {{ project.language }}
+          </p>
         </div>
       </div>
     </div>
   </transition>
 </template>
+
+<style scoped>
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+</style>
