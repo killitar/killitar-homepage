@@ -50,26 +50,24 @@ const selectTheme = (theme: string): void => {
         </button>
       </div>
       <div
-        class="flex h-5 w-10 items-center justify-evenly rounded-full bg-secondary-variant"
+        class="flex h-5 w-10 items-center justify-evenly rounded-full bg-secondary-variant duration-300"
       >
-        <div class="h-2 w-2 rounded-full bg-secondary"></div>
-        <div class="h-2 w-2 rounded-full bg-primary"></div>
-        <div class="h-2 w-2 rounded-full bg-primary-variant"></div>
+        <div class="h-2 w-2 rounded-full bg-secondary duration-300"></div>
+        <div class="h-2 w-2 rounded-full bg-primary duration-300"></div>
+        <div class="h-2 w-2 rounded-full bg-primary-variant duration-300"></div>
       </div>
 
       <transition
         enter-from-class="opacity-0"
-        leave-to-class="opacity-0"
         enter-active-class="transition duration-300"
-        leave-active-class="transition duration-300"
       >
         <div
           v-if="isThemeListDropdownVisible"
-          class="absolute top-24 rounded-sm border-2 border-primary bg-secondary-variant py-3"
+          class="absolute left-3/4 top-24 z-10 min-w-44 rounded-sm border-2 border-primary bg-secondary-variant py-3"
         >
           <ul class="flex flex-col items-start">
             <li
-              class="mb-2 w-full cursor-pointer px-2 text-primary-variant last:mb-0 hover:bg-background"
+              class="mb-2 w-full cursor-pointer px-2 text-primary-variant duration-300 last:mb-0 hover:bg-background"
               v-for="theme in listThemes"
               :key="theme.name"
               @click="selectTheme(theme.name)"
