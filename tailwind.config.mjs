@@ -45,6 +45,13 @@ export default {
         'secondary-variant': '#292739',
         background: '#1e1e2e',
       },
+      'blueberry-light': {
+        primary: '#506477',
+        'primary-variant': '#92a4be',
+        secondary: '#678198',
+        'secondary-variant': '#c1c7df',
+        background: '#dae0f5',
+      },
     }),
   ],
 };
