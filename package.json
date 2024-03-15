@@ -2,6 +2,7 @@
   "name": "killitar-homepage",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@8.6.10+sha256.f8021ef55420c7d7cafe689c2cdb1bf1881d2f75219705ad3ab38966eac283f3",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -32,6 +33,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "packageManager": "pnpm@8.6.10+sha256.f8021ef55420c7d7cafe689c2cdb1bf1881d2f75219705ad3ab38966eac283f3"
+  }
 }
