@@ -1,11 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 import ThemeButton from '@components/ThemeButton.vue';
 import AboutMe from '@components/AboutMe.vue';
 import SocialLinks from '@components/SocialLinks.vue';
 import ProjectsAccordion from '@components/ProjectsAccordion.vue';
 import Footer from '@components/Footer.vue';
+
 import getRandomTheme from '../utils/getRandomTheme.ts';
+
 import listThemes from '../data/listThemes.json';
 
 const initialTheme = getRandomTheme(listThemes);

@@ -1,7 +1,5 @@
 <script setup lang="ts">
-function getCurrentYear(): number {
-  return new Date().getFullYear();
-}
+import getCurrentYear from '../utils/getCurrentYear.ts';
 </script>
 <template>
   <footer>
