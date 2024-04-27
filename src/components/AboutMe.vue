@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="animate-slideIn mb-10 text-4xl text-secondary duration-300">
+    <h2 class="mb-10 animate-slideIn text-4xl text-secondary duration-300">
       hello,<br />
       i'm <span class="text-primary duration-300">miroslav lincovsci</span>.👋
     </h2>
