@@ -23,12 +23,10 @@
       class="group mr-5 flex cursor-pointer items-center text-primary-variant duration-300 hover:text-secondary"
     >
       <svg
-        width="21"
-        height="16"
         viewBox="0 0 21 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="mr-1 fill-primary-variant duration-300 group-hover:fill-secondary"
+        class="mr-1 w-5 h-4 fill-primary-variant duration-300 group-hover:fill-secondary"
       >
         <path
           d="M2.78189 16C2.23189 16 1.76122 15.8043 1.36989 15.413C0.978558 15.0217 0.782558 14.5507 0.781891 14V2C0.781891 1.45 0.977891 0.979333 1.36989 0.588C1.76189 0.196666 2.23256 0.000666667 2.78189 0H18.7819C19.3319 0 19.8029 0.196 20.1949 0.588C20.5869 0.98 20.7826 1.45067 20.7819 2V14C20.7819 14.55 20.5862 15.021 20.1949 15.413C19.8036 15.805 19.3326 16.0007 18.7819 16H2.78189ZM10.7819 9L2.78189 4V14H18.7819V4L10.7819 9ZM10.7819 7L18.7819 2H2.78189L10.7819 7ZM2.78189 4V2V14V4Z"
@@ -40,17 +38,9 @@
       class="group flex cursor-pointer items-center text-primary-variant hover:text-secondary"
     >
       <svg
-        width="21"
-        height="20"
-        viewBox="0 0 21 20"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="mr-1 fill-primary-variant group-hover:fill-secondary"
-      >
-        <path
-          d="M10.7819 15.11L5.72761 10.0543L6.7376 9.02714L10.0676 12.3571V0H11.4962V12.3571L14.8247 9.02857L15.8362 10.0543L10.7819 15.11ZM3.08903 20C2.43189 20 1.88332 19.78 1.44332 19.34C1.00237 18.899 0.781891 18.35 0.781891 17.6929V14.2314H2.21046V17.6929C2.21046 17.9119 2.30189 18.1133 2.48475 18.2971C2.66856 18.48 2.86999 18.5714 3.08903 18.5714H18.4747C18.6938 18.5714 18.8952 18.48 19.079 18.2971C19.2619 18.1133 19.3533 17.9119 19.3533 17.6929V14.2314H20.7819V17.6929C20.7819 18.35 20.5619 18.8986 20.1219 19.3386C19.6809 19.7795 19.1319 20 18.4747 20H3.08903Z"
-        />
-      </svg>
+        class="mr-1 w-5 h-5 fill-primary-variant group-hover:fill-secondary" viewBox="0 0 24 24" x="246" y="246" role="img" style="display:inline-block;vertical-align:middle"
+      ><g fill="black"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17h6m-6-3h6M13 3H8.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 0 0-.874.874C5 4.52 5 5.08 5 6.2v11.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218c.377-.192.683-.498.875-.874c.218-.428.218-.986.218-2.104V9.326L18.999 9M13 3c.286.003.466.014.638.055c.204.05.4.13.579.24c.202.124.375.297.72.643l3.126 3.125c.346.346.518.518.642.72c.11.18.19.374.24.578c.04.173.051.354.054.639M13 3v2.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h2.802" /></g></svg>
       resume</a>
   </div>
 </template>
