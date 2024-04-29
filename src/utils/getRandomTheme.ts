@@ -1,12 +1,12 @@
 interface Theme {
-  id: number;
-  name: string;
+  id: number
+  name: string
 }
 
-const getRandomTheme = (themesList: Theme[]): string => {
-  const randomIndex: number = Math.floor(Math.random() * themesList.length);
-  const theme = themesList[randomIndex].name;
-  return theme;
-};
+function getRandomTheme(themesList: Theme[]): string {
+  const randomIndex: number = Math.floor(Math.random() * themesList.length)
+  const theme = themesList[randomIndex].name
+  return theme
+}
 
-export default getRandomTheme;
+export default getRandomTheme

@@ -1,51 +1,50 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
-import listThemes from '../data/listThemes.json';
+import { onMounted, onUnmounted, ref } from 'vue'
+import listThemes from '../data/listThemes.json'
 
 const props = defineProps<{
-    initialThemeName: string;
-}>();
+  initialThemeName: string
+}>()
 
-const parentDiv = ref(null);
-const isThemeListDropdownVisible = ref(false);
-const currentTheme = ref(props.initialThemeName);
+const parentDiv = ref(null)
+const isThemeListDropdownVisible = ref(false)
+const currentTheme = ref(props.initialThemeName)
 
-const toggleThemeListDropdownVisible = (): void => {
-  isThemeListDropdownVisible.value = !isThemeListDropdownVisible.value;
-};
+function toggleThemeListDropdownVisible(): void {
+  isThemeListDropdownVisible.value = !isThemeListDropdownVisible.value
+}
 
-const selectTheme = (theme: string): void => {
-  const selectedClassTheme = theme;
+function selectTheme(theme: string): void {
+  const selectedClassTheme = theme
 
   if (selectedClassTheme) {
-    document.body.classList.remove(currentTheme.value);
-    document.body.classList.add(selectedClassTheme);
+    document.body.classList.remove(currentTheme.value)
+    document.body.classList.add(selectedClassTheme)
 
-    currentTheme.value = selectedClassTheme;
-    toggleThemeListDropdownVisible();
+    currentTheme.value = selectedClassTheme
+    toggleThemeListDropdownVisible()
   }
-};
-const handleClickOutside = (event: MouseEvent): void => {
-  if (parentDiv.value && !parentDiv.value.contains(event.target)) {
-    isThemeListDropdownVisible.value = false;
-  }
-};
+}
+function handleClickOutside(event: MouseEvent): void {
+  if (parentDiv.value && !parentDiv.value.contains(event.target))
+    isThemeListDropdownVisible.value = false
+}
 
 onMounted(() => {
-  document.addEventListener('click', handleClickOutside);
-});
+  document.addEventListener('click', handleClickOutside)
+})
 
 onUnmounted(() => {
-  document.removeEventListener('click', handleClickOutside);
-});
+  document.removeEventListener('click', handleClickOutside)
+})
 </script>
 
 <template>
   <div class="flex items-center justify-end">
     <div ref="parentDiv" class="flex items-center">
       <button
-        @click="toggleThemeListDropdownVisible"
         class="group mr-1 flex items-center"
+        @click="toggleThemeListDropdownVisible"
       >
         <svg
           viewBox="0 0 16 16"
@@ -66,9 +65,9 @@ onUnmounted(() => {
       <div
         class="flex h-5 w-10 items-center justify-evenly rounded-full bg-secondary-variant duration-300"
       >
-        <div class="h-2 w-2 rounded-full bg-secondary duration-300"></div>
-        <div class="h-2 w-2 rounded-full bg-primary duration-300"></div>
-        <div class="h-2 w-2 rounded-full bg-primary-variant duration-300"></div>
+        <div class="h-2 w-2 rounded-full bg-secondary duration-300" />
+        <div class="h-2 w-2 rounded-full bg-primary duration-300" />
+        <div class="h-2 w-2 rounded-full bg-primary-variant duration-300" />
       </div>
 
       <transition
@@ -81,9 +80,9 @@ onUnmounted(() => {
         >
           <ul class="flex flex-col items-start">
             <li
-              class="mb-2 w-full cursor-pointer px-2 text-primary-variant duration-300 last:mb-0 hover:bg-background"
               v-for="theme in listThemes"
               :key="theme.name"
+              class="mb-2 w-full cursor-pointer px-2 text-primary-variant duration-300 last:mb-0 hover:bg-background"
               @click="selectTheme(theme.name)"
             >
               {{ theme.name }}

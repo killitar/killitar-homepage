@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import listProjects from '../data/listProjects.json';
-import { ref } from 'vue';
+import { ref } from 'vue'
+import listProjects from '../data/listProjects.json'
 
-const isAccordionOpen = ref<boolean>(false);
-const toggleAccordionOpen = (): void => {
-  isAccordionOpen.value = !isAccordionOpen.value;
-};
+const isAccordionOpen = ref<boolean>(false)
+function toggleAccordionOpen(): void {
+  isAccordionOpen.value = !isAccordionOpen.value
+}
 </script>
 
 <template>
   <button
-    @click="toggleAccordionOpen"
     type="button"
     class="group mb-4 flex min-w-full items-center justify-between"
+    @click="toggleAccordionOpen"
   >
     <p class="text-4xl text-primary duration-300 group-hover:text-secondary">
       projects
@@ -21,12 +21,7 @@ const toggleAccordionOpen = (): void => {
       viewBox="0 0 21 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      :class="[
-        'h-5',
-        'w-5',
-        'fill-primary',
-        'duration-300',
-        'group-hover:fill-secondary',
+      class="h-5 w-5 fill-primary duration-300 group-hover:fill-secondary" :class="[
         isAccordionOpen ? 'rotate-90' : 'rotate-0',
       ]"
     >
@@ -40,12 +35,13 @@ const toggleAccordionOpen = (): void => {
     enter-active-class="transition duration-700"
   >
     <div
-      class="scrollbar-hide h-4/5 overflow-y-auto overscroll-y-none scroll-smooth"
       v-if="isAccordionOpen"
+      class="scrollbar-hide h-4/5 overflow-y-auto overscroll-y-none scroll-smooth"
     >
       <div
-        class="mb-3 flex flex-col rounded-lg border-2 border-primary p-3 last:mb-0"
         v-for="project in listProjects"
+        :key="project.name"
+        class="mb-3 flex flex-col rounded-lg border-2 border-primary p-3 last:mb-0"
       >
         <div class="mb-2 flex items-center">
           <svg
@@ -61,8 +57,7 @@ const toggleAccordionOpen = (): void => {
             class="text-lg text-primary duration-300"
             :href="project.html_url"
             target="_blank"
-            >{{ project.name }}</a
-          >
+          >{{ project.name }}</a>
         </div>
         <span class="text-secondary duration-300">{{
           project.description
@@ -70,7 +65,7 @@ const toggleAccordionOpen = (): void => {
         <div class="flex items-center">
           <div
             class="mr-1 h-2 w-2 rounded-full bg-secondary duration-300"
-          ></div>
+          />
           <p class="text-primary-variant duration-300">
             {{ project.language }}
           </p>

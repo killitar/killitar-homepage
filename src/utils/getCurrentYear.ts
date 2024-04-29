@@ -1,5 +1,5 @@
 function getCurrentYear(): number {
-  return new Date().getFullYear();
+  return new Date().getFullYear()
 }
 
-export default getCurrentYear;
+export default getCurrentYear

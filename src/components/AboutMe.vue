@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="mb-10 animate-slideIn text-4xl text-secondary duration-300">
-      hello,<br />
+      hello,<br>
       i'm <span class="text-primary duration-300">miroslav lincovsci</span>.👋
     </h2>
     <p class="animate-fadeIn text-lg text-secondary duration-300">

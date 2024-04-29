@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import getCurrentYear from '../utils/getCurrentYear.ts';
+import getCurrentYear from '../utils/getCurrentYear.ts'
 </script>
+
 <template>
   <footer>
     <h5 class="text-primary-variant duration-300">
