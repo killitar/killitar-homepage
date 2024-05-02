@@ -8,7 +8,7 @@ function toggleAccordionOpen(): void {
 </script>
 
 <template>
-  <div class="border-2 rounded-xl p-2 border-secondary">
+  <div class="rounded-xl border-2 border-secondary p-2">
     <button
       type="button"
       class="group flex min-w-full items-center justify-between"
@@ -18,11 +18,14 @@ function toggleAccordionOpen(): void {
         about me
       </p>
       <svg
-        id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        class="h-5 w-5 fill-primary duration-300 group-hover:fill-secondary" :class="[
-          isAccordionOpen ? 'rotate-90' : 'rotate-0',
-        ]"
-        viewBox="0 0 512 512" xml:space="preserve"
+        id="Layer_1"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        class="h-5 w-5 fill-primary duration-300 group-hover:fill-secondary"
+        :class="[isAccordionOpen ? 'rotate-90' : 'rotate-0']"
+        viewBox="0 0 512 512"
+        xml:space="preserve"
       >
         <g>
           <g>
@@ -42,11 +45,11 @@ function toggleAccordionOpen(): void {
         v-if="isAccordionOpen"
         class="scrollbar-hide h-4/5 overflow-y-auto overscroll-y-none scroll-smooth"
       >
-        <hr class="my-2 border-1 border-secondary">
+        <hr class="border-1 my-2 border-secondary">
         <p class="text-secondary duration-300">
-          a front-end web developer, currently studying at the Russian University of
-          Cooperation. i love how the web can connect people, it inspires me to get
-          better and keep learning.
+          a front-end web developer, currently studying at the Russian
+          University of Cooperation. i love how the web can connect people, it
+          inspires me to get better and keep learning.
         </p>
       </div>
     </transition>

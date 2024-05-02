@@ -9,33 +9,39 @@ function toggleAccordionOpen(): void {
 </script>
 
 <template>
-  <div class="border-2 rounded-xl p-2 border-secondary lg:border-0 lg:rounded-none lg:p-0">
+  <div
+    class="rounded-xl border-2 border-secondary p-2 lg:rounded-none lg:border-0 lg:p-0"
+  >
     <button
       type="button"
-      class="group lg:mb-4 flex min-w-full items-center justify-between"
+      class="group flex min-w-full items-center justify-between lg:mb-4"
       @click="toggleAccordionOpen"
     >
-      <p class="text-2xl lg:text-4xl text-primary duration-300 group-hover:text-secondary">
+      <p
+        class="text-2xl text-primary duration-300 group-hover:text-secondary lg:text-4xl"
+      >
         projects
       </p>
       <svg
         viewBox="0 0 21 28"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 fill-primary duration-300 group-hover:fill-secondary hidden lg:block" :class="[
-          isAccordionOpen ? 'rotate-90' : 'rotate-0',
-        ]"
+        class="hidden h-5 w-5 fill-primary duration-300 group-hover:fill-secondary lg:block"
+        :class="[isAccordionOpen ? 'rotate-90' : 'rotate-0']"
       >
         <path
           d="M0.666651 1.99999V26C0.667412 26.243 0.73443 26.4812 0.860487 26.6889C0.986546 26.8966 1.16687 27.066 1.38205 27.1789C1.59724 27.2918 1.83913 27.3438 2.08169 27.3295C2.32426 27.3151 2.55831 27.2348 2.75865 27.0973L20.092 15.0973C20.8106 14.6 20.8106 13.4027 20.092 12.904L2.75865 0.903992C2.55873 0.765092 2.32456 0.683637 2.08159 0.668479C1.83862 0.65332 1.59615 0.705037 1.38051 0.81801C1.16487 0.930984 0.984312 1.10089 0.858458 1.30928C0.732605 1.51766 0.666267 1.75655 0.666651 1.99999Z"
         />
       </svg>
       <svg
-        id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        class="h-5 w-5 fill-primary duration-300 group-hover:fill-secondary lg:hidden" :class="[
-          isAccordionOpen ? 'rotate-90' : 'rotate-0',
-        ]"
-        viewBox="0 0 512 512" xml:space="preserve"
+        id="Layer_1"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        class="h-5 w-5 fill-primary duration-300 group-hover:fill-secondary lg:hidden"
+        :class="[isAccordionOpen ? 'rotate-90' : 'rotate-0']"
+        viewBox="0 0 512 512"
+        xml:space="preserve"
       >
         <g>
           <g>
@@ -55,11 +61,11 @@ function toggleAccordionOpen(): void {
         v-if="isAccordionOpen"
         class="scrollbar-hide h-4/5 overflow-y-auto overscroll-y-none scroll-smooth"
       >
-        <hr class="my-2 border-1 border-secondary lg:hidden">
+        <hr class="border-1 my-2 border-secondary lg:hidden">
         <div
           v-for="project in listProjects"
           :key="project.name"
-          class="mb-3 flex flex-col lg:rounded-lg lg:border-2 lg:border-primary p-3 last:mb-0"
+          class="mb-3 flex flex-col p-3 last:mb-0 lg:rounded-lg lg:border-2 lg:border-primary"
         >
           <div class="mb-2 flex items-center">
             <svg
@@ -81,9 +87,7 @@ function toggleAccordionOpen(): void {
             project.description
           }}</span>
           <div class="flex items-center">
-            <div
-              class="mr-1 h-2 w-2 rounded-full bg-secondary duration-300"
-            />
+            <div class="mr-1 h-2 w-2 rounded-full bg-secondary duration-300" />
             <p class="text-primary-variant duration-300">
               {{ project.language }}
             </p>
