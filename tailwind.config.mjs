@@ -1,4 +1,4 @@
-const { createThemes } = require('tw-colors');
+const { createThemes } = require('tw-colors')
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -24,34 +24,37 @@ export default {
   plugins: [
     createThemes({
       'gruvbox-dark': {
-        primary: '#d79921',
+        'primary': '#d79921',
         'primary-variant': '#665c54',
-        secondary: '#ebdbb2',
+        'secondary': '#ebdbb2',
         'secondary-variant': '#212121',
-        background: '#282828',
+        'background': '#282828',
       },
 
       'solarized-dark': {
-        primary: '#859900',
+        'primary': '#859900',
         'primary-variant': '#2aa198',
-        secondary: '#268bd2',
+        'secondary': '#268bd2',
         'secondary-variant': '#00222b',
-        background: '#002b36',
+        'background': '#002b36',
       },
-      catppuccin: {
-        primary: '#abe9b3',
+      'catppuccin': {
+        'primary': '#abe9b3',
         'primary-variant': '#575268',
-        secondary: '#d9e0ee',
+        'secondary': '#d9e0ee',
         'secondary-variant': '#292739',
-        background: '#1e1e2e',
+        'background': '#1e1e2e',
       },
       'blueberry-light': {
-        primary: '#506477',
+        'primary': '#506477',
         'primary-variant': '#92a4be',
-        secondary: '#678198',
+        'secondary': '#678198',
         'secondary-variant': '#c1c7df',
-        background: '#dae0f5',
+        'background': '#dae0f5',
       },
     }),
   ],
-};
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+}

@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-import ThemeButton from '@components/ThemeButton.vue'
-import AboutMe from '@components/AboutMe.vue'
-import SocialLinks from '@components/SocialLinks.vue'
-import ProjectsAccordion from '@components/ProjectsAccordion.vue'
-import Footer from '@components/Footer.vue'
+import ThemeButton from '../components/ThemeButton.vue'
+import AboutMe from '../components/AboutMe.vue'
+import SocialLinks from '../components/SocialLinks.vue'
+import ProjectsAccordion from '../components/ProjectsAccordion.vue'
+import AccordionAboutMe from '../mobile/AccordionAboutMe.vue'
+import Footer from '../components/Footer.vue'
 
 import getRandomTheme from '../utils/getRandomTheme.ts'
 
@@ -16,22 +17,23 @@ const initialTheme = getRandomTheme(listThemes)
 
 <Layout initialTheme={initialTheme} title="Miroslav Lincovsci">
   <div
-    class="min-w-screen min-h-screen bg-background px-8 py-14 delay-75 duration-300 ease-in-out xl:px-40"
+    class="min-w-screen min-h-screen p-8 pt-14 delay-75 duration-300 ease-in-out lg:px-40"
   >
     <header class="mb-36">
       <ThemeButton initialThemeName={initialTheme} client:load />
     </header>
-    <main class="flex">
-      <div class="xl:mr-24 xl:w-1/2">
+    <main class="lg:flex">
+      <div class="lg:mr-24 lg:w-1/2">
         <AboutMe class="mb-10 duration-300" />
         <SocialLinks />
+        <AccordionAboutMe client:load class="mt-10 lg:hidden" />
       </div>
-      <div class="xl:w-1/2">
+      <div class="w-full lg:w-1/2 mt-5 lg:mt-0">
         <ProjectsAccordion client:load />
       </div>
     </main>
-    <footer class="absolute bottom-1 left-1/2 -translate-x-1/2">
-      <Footer />
-    </footer>
   </div>
+  <footer class="w-full text-center hidden lg:block">
+    <Footer />
+  </footer>
 </Layout>
