@@ -8,7 +8,7 @@ const { title, initialTheme } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class={initialTheme}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -23,7 +23,7 @@ const { title, initialTheme } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class={initialTheme}>
+  <body class="bg-background scrollbar-hide">
     <slot />
   </body>
 </html>
@@ -35,5 +35,12 @@ const { title, initialTheme } = Astro.props
       sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  html::-webkit-scrollbar {
+    display: none;
   }
 </style>
