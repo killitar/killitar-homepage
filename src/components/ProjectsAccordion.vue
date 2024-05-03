@@ -65,9 +65,9 @@ function toggleAccordionOpen(): void {
         <div
           v-for="project in listProjects"
           :key="project.name"
-          class="mb-3 flex flex-col p-3 last:mb-0 lg:rounded-lg lg:border-2 lg:border-primary"
+          class="mb-3 flex flex-col last:mb-0 lg:rounded-lg lg:border-2 lg:border-primary lg:p-3"
         >
-          <div class="mb-2 flex items-center">
+          <div class="mb-1 flex items-center lg:mb-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="mr-1 h-5 w-5 fill-primary"
@@ -86,7 +86,7 @@ function toggleAccordionOpen(): void {
           <span class="text-secondary duration-300">{{
             project.description
           }}</span>
-          <div class="flex items-center">
+          <div class="hidden items-center lg:flex">
             <div class="mr-1 h-2 w-2 rounded-full bg-secondary duration-300" />
             <p class="text-primary-variant duration-300">
               {{ project.language }}

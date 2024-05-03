@@ -8,7 +8,7 @@ function toggleAccordionOpen(): void {
 </script>
 
 <template>
-  <div class="rounded-xl border-2 border-secondary p-2">
+  <div class="rounded-xl border-2 border-secondary p-2 duration-300">
     <button
       type="button"
       class="group flex min-w-full items-center justify-between"

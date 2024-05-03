@@ -40,14 +40,13 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-end">
-    <div ref="parentDiv" class="flex items-center">
+  <div ref="parentDiv" class="relative">
+    <div class="flex items-center">
       <button
         class="group mr-1 flex items-center"
         @click="toggleThemeListDropdownVisible"
       >
         <svg
-          viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           class="mr-1 h-4 w-4 cursor-pointer fill-primary-variant duration-300 group-hover:fill-primary"
@@ -57,7 +56,7 @@ onUnmounted(() => {
           />
         </svg>
         <span
-          class="text-base text-primary-variant duration-300 group-hover:text-primary"
+          class="text-primary-variant duration-300 group-hover:text-primary"
         >
           {{ currentTheme }}
         </span>
@@ -69,27 +68,26 @@ onUnmounted(() => {
         <div class="h-2 w-2 rounded-full bg-primary duration-300" />
         <div class="h-2 w-2 rounded-full bg-primary-variant duration-300" />
       </div>
-
-      <transition
-        enter-from-class="opacity-0"
-        enter-active-class="transition duration-300"
-      >
-        <div
-          v-if="isThemeListDropdownVisible"
-          class="absolute left-3/4 top-24 z-10 min-w-44 rounded-sm border-2 border-primary bg-secondary-variant py-3"
-        >
-          <ul class="flex flex-col items-start">
-            <li
-              v-for="theme in listThemes"
-              :key="theme.name"
-              class="mb-2 w-full cursor-pointer px-2 text-primary-variant duration-300 last:mb-0 hover:bg-background"
-              @click="selectTheme(theme.name)"
-            >
-              {{ theme.name }}
-            </li>
-          </ul>
-        </div>
-      </transition>
     </div>
+    <transition
+      enter-from-class="opacity-0"
+      enter-active-class="transition duration-300"
+    >
+      <div
+        v-if="isThemeListDropdownVisible"
+        class="absolute z-10 mt-1 min-w-44 rounded-sm border-2 border-primary bg-secondary-variant py-3 shadow-lg"
+      >
+        <ul class="flex flex-col items-start">
+          <li
+            v-for="theme in listThemes"
+            :key="theme.name"
+            class="mb-2 w-full cursor-pointer px-2 text-primary-variant duration-300 last:mb-0 hover:bg-background"
+            @click="selectTheme(theme.name)"
+          >
+            {{ theme.name }}
+          </li>
+        </ul>
+      </div>
+    </transition>
   </div>
 </template>
