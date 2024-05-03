@@ -6,7 +6,7 @@ const props = defineProps<{
   initialThemeName: string
 }>()
 
-const parentDiv = ref(null)
+const parentDiv = ref()
 const isThemeListDropdownVisible = ref(false)
 const currentTheme = ref(props.initialThemeName)
 
@@ -27,7 +27,7 @@ function selectTheme(theme: string): void {
 }
 function handleClickOutside(event: MouseEvent): void {
   if (parentDiv.value && !parentDiv.value.contains(event.target))
-    isThemeListDropdownVisible.value = false
+    toggleThemeListDropdownVisible()
 }
 
 onMounted(() => {
