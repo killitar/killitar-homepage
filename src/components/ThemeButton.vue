@@ -2,13 +2,10 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import listThemes from '../data/listThemes.json'
 
-const props = defineProps<{
-  initialThemeName: string
-}>()
-
+const initialTheme = document.querySelector('html')?.classList.value
 const parentDiv = ref()
 const isThemeListDropdownVisible = ref(false)
-const currentTheme = ref(props.initialThemeName)
+const currentTheme = ref(initialTheme ?? 'gruvbox-dark')
 
 function toggleThemeListDropdownVisible(): void {
   isThemeListDropdownVisible.value = !isThemeListDropdownVisible.value
