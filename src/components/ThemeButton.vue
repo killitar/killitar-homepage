@@ -27,7 +27,7 @@ function selectTheme(theme: string): void {
 }
 function handleClickOutside(event: MouseEvent): void {
   if (parentDiv.value && !parentDiv.value.contains(event.target))
-    toggleThemeListDropdownVisible()
+    isThemeListDropdownVisible.value = false
 }
 
 onMounted(() => {
