@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '@layouts/Layout.astro'
 
-import ThemeButton from '../components/ThemeButton.vue'
-import AboutMe from '../components/AboutMe.vue'
-import SocialLinks from '../components/SocialLinks.vue'
-import ProjectsAccordion from '../components/ProjectsAccordion.vue'
-import AccordionAboutMe from '../mobile/AccordionAboutMe.vue'
-import Footer from '../components/Footer.vue'
+import ThemeButton from '@components/ThemeButton.vue'
+import AboutMe from '@components/AboutMe.vue'
+import SocialLinks from '@components/SocialLinks.vue'
+import ProjectsAccordion from '@components/ProjectsAccordion.vue'
+import AccordionAboutMe from '@components/mobile/AccordionAboutMe.vue'
+import Footer from '@components/Footer.vue'
 ---
 
 <script is:inline src="/getInitialTheme.js"></script>
@@ -15,7 +15,7 @@ import Footer from '../components/Footer.vue'
   <div
     class="min-w-screen min-h-screen p-8 pt-12 delay-75 duration-300 ease-in-out lg:px-40"
   >
-    <header class="mb-24 lg:mb-36">
+    <header class="mb-24 lg:mb-56">
       <ThemeButton client:only="vue" />
     </header>
     <main class="lg:flex">
