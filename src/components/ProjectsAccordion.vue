@@ -59,7 +59,7 @@ function toggleAccordionOpen(): void {
     >
       <div
         v-if="isAccordionOpen"
-        class="scrollbar-hide h-4/5 overflow-y-auto overscroll-y-none scroll-smooth"
+        class="scrollbar-hide max-h-64 overflow-y-auto overscroll-y-none scroll-smooth"
       >
         <hr class="border-1 my-2 border-secondary lg:hidden">
         <div
