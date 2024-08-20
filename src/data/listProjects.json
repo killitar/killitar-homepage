@@ -12,5 +12,12 @@
     "html_url": "https://github.com/Killitar/killitar-homepage",
     "description": "a personal portfolio",
     "language": "vue3 / astro / typescript / tailwindcss"
+  },
+  {
+    "id": 2,
+    "name": "obscure.nvim",
+    "html_url": "https://github.com/Killitar/obscure.nvim",
+    "description": "a plugin for nvim",
+    "language": "lua"
   }
 ]
