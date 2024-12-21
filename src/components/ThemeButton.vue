@@ -41,9 +41,9 @@ onUnmounted(() => {
     <div class="flex items-center">
       <button
         class="group mr-1 flex items-center"
-        @click="toggleThemeListDropdownVisible"
         aria-haspopup="true"
         :aria-expanded="isThemeListDropdownVisible"
+        @click="toggleThemeListDropdownVisible"
       >
         <svg
           fill="none"
