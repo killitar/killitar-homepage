@@ -41,6 +41,8 @@ onUnmounted(() => {
     <div class="flex items-center">
       <button
         class="group mr-1 flex items-center"
+        aria-haspopup="true"
+        :aria-expanded="isThemeListDropdownVisible"
         @click="toggleThemeListDropdownVisible"
       >
         <svg
@@ -73,6 +75,7 @@ onUnmounted(() => {
       <div
         v-if="isThemeListDropdownVisible"
         class="absolute z-10 mt-1 min-w-44 rounded-sm border-2 border-primary bg-secondary-variant py-3 shadow-lg"
+        role="menu"
       >
         <ul class="flex flex-col items-start">
           <li

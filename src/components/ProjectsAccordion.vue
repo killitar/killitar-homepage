@@ -2,9 +2,9 @@
 import { ref } from 'vue'
 import listProjects from '../data/listProjects.json'
 
-const isAccordionOpen = ref<boolean>(false)
-function toggleAccordionOpen(): void {
-  isAccordionOpen.value = !isAccordionOpen.value
+const isProjectsAccordionOpen = ref<boolean>(false)
+function toggleProjectsAccordion(): void {
+  isProjectsAccordionOpen.value = !isProjectsAccordionOpen.value
 }
 </script>
 
@@ -15,7 +15,7 @@ function toggleAccordionOpen(): void {
     <button
       type="button"
       class="group flex min-w-full items-center justify-between lg:mb-4"
-      @click="toggleAccordionOpen"
+      @click="toggleProjectsAccordion"
     >
       <p
         class="text-2xl text-primary duration-300 group-hover:text-secondary lg:text-4xl"
@@ -27,7 +27,7 @@ function toggleAccordionOpen(): void {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         class="hidden h-5 w-5 fill-primary duration-300 group-hover:fill-secondary lg:block"
-        :class="[isAccordionOpen ? 'rotate-90' : 'rotate-0']"
+        :class="[isProjectsAccordionOpen ? 'rotate-90' : 'rotate-0']"
       >
         <path
           d="M0.666651 1.99999V26C0.667412 26.243 0.73443 26.4812 0.860487 26.6889C0.986546 26.8966 1.16687 27.066 1.38205 27.1789C1.59724 27.2918 1.83913 27.3438 2.08169 27.3295C2.32426 27.3151 2.55831 27.2348 2.75865 27.0973L20.092 15.0973C20.8106 14.6 20.8106 13.4027 20.092 12.904L2.75865 0.903992C2.55873 0.765092 2.32456 0.683637 2.08159 0.668479C1.83862 0.65332 1.59615 0.705037 1.38051 0.81801C1.16487 0.930984 0.984312 1.10089 0.858458 1.30928C0.732605 1.51766 0.666267 1.75655 0.666651 1.99999Z"
@@ -39,7 +39,7 @@ function toggleAccordionOpen(): void {
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         class="h-5 w-5 fill-primary duration-300 group-hover:fill-secondary lg:hidden"
-        :class="[isAccordionOpen ? 'rotate-90' : 'rotate-0']"
+        :class="[isProjectsAccordionOpen ? 'rotate-90' : 'rotate-0']"
         viewBox="0 0 512 512"
         xml:space="preserve"
       >
@@ -57,12 +57,12 @@ function toggleAccordionOpen(): void {
       enter-from-class="opacity-0"
       enter-active-class="transition duration-700"
     >
-      <div
-        v-if="isAccordionOpen"
+      <ul
+        v-if="isProjectsAccordionOpen"
         class="scrollbar-hide max-h-64 overflow-y-auto overscroll-y-none scroll-smooth"
       >
         <hr class="border-1 my-2 border-secondary lg:hidden">
-        <div
+        <li
           v-for="project in listProjects"
           :key="project.name"
           class="mb-3 flex flex-col last:mb-0 lg:rounded-lg lg:border-2 lg:border-primary lg:p-3"
@@ -92,8 +92,8 @@ function toggleAccordionOpen(): void {
               {{ project.language }}
             </p>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </transition>
   </div>
 </template>
