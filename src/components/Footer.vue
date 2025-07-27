@@ -5,7 +5,7 @@ import getCurrentYear from '../utils/getCurrentYear.ts'
 <template>
   <footer>
     <h5 class="text-primary-variant duration-300">
-      &copy; {{ getCurrentYear() }}. Miroslav Lincovsci. All rights reserved.
+      &copy; {{ getCurrentYear() }}. Miroslav Lincovschi. All rights reserved.
     </h5>
   </footer>
 </template>
