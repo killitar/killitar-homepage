@@ -3,21 +3,28 @@
     "id": 0,
     "name": "sky-cast",
     "html_url": "https://github.com/Killitar/sky-cast",
-    "description": "a weather app builded with vue & tauri",
+    "description": "a weather app builded with tauri and vue",
     "language": "vue3 / typescript / tailwindcss"
   },
   {
     "id": 1,
-    "name": "killitar-portfolio",
-    "html_url": "https://github.com/Killitar/killitar-homepage",
-    "description": "a personal portfolio",
-    "language": "vue3 / astro / typescript / tailwindcss"
+    "name": "obscure.nvim",
+    "html_url": "https://github.com/Killitar/obscure.nvim",
+    "description": "a colorscheme plugin for nvim",
+    "language": "lua"
   },
   {
     "id": 2,
-    "name": "obscure.nvim",
-    "html_url": "https://github.com/Killitar/obscure.nvim",
-    "description": "a plugin for nvim",
-    "language": "lua"
+    "name": "nod",
+    "html_url": "https://github.com/Killitar/nod",
+    "description": "a habit tracker",
+    "language": "swift"
+  },
+  {
+    "id": 3,
+    "name": "killitar-portfolio",
+    "html_url": "https://github.com/Killitar/killitar-homepage",
+    "description": "a personal developer portfolio",
+    "language": "vue3 / astro / typescript / tailwindcss"
   }
 ]
