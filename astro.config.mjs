@@ -7,4 +7,3 @@ import vue from '@astrojs/vue'
 export default defineConfig({
   integrations: [tailwind(), vue()],
 })
-
