@@ -2,6 +2,20 @@
   <hr class="w-full border-2 border-secondary lg:hidden">
   <div class="my-4 flex items-center justify-evenly lg:justify-normal">
     <a
+      href="https://x.com/mirolincx"
+      class="group cursor-pointer items-center text-primary-variant duration-300 hover:text-secondary lg:mr-5 lg:flex"
+      target="_blank"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 31 30"
+        class="mr-1 h-7 w-6 fill-primary duration-300 group-hover:fill-secondary lg:h-5 lg:w-5 lg:fill-primary-variant"
+      >
+        <path d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z" />
+      </svg>
+      <span class="hidden lg:block">x</span>
+    </a>
+    <a
       href="https://github.com/Killitar"
       class="group cursor-pointer items-center text-primary-variant duration-300 hover:text-secondary lg:mr-5 lg:flex"
       target="_blank"
@@ -20,7 +34,8 @@
           <title>github</title>
         </path>
       </svg>
-      <span class="hidden lg:block">github</span></a>
+      <span class="hidden lg:block">github</span>
+    </a>
     <a
       href="mailto:lincovsci02.work@gmail.com"
       class="group cursor-pointer items-center text-primary-variant duration-300 hover:text-secondary lg:mr-5 lg:flex"
