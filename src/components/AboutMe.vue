@@ -7,8 +7,7 @@
       i'm <span class="text-primary duration-300">miroslav lincovschi</span>.
     </h2>
     <p class="hidden animate-fadeIn text-base text-secondary duration-300 lg:block lg:text-lg">
-      i'm a front-end developer driven by creativity and the challenge of crafting user-friendly, beautiful web
-      experiences. every project is an opportunity to innovate and make the digital world more accessible and engaging.
+      i'm a front-end developer who is driven by creativity and the challenge of creating beautiful, user-friendly web experiences.
     </p>
   </div>
 </template>
