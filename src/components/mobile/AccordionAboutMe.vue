@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 const isAccordionOpen = ref<boolean>(false)
+
 function toggleAccordionOpen(): void {
   isAccordionOpen.value = !isAccordionOpen.value
 }
@@ -47,9 +48,7 @@ function toggleAccordionOpen(): void {
       >
         <hr class="border-1 my-2 border-secondary">
         <p class="text-secondary duration-300">
-          a front-end web developer, currently studying at the Russian
-          University of Cooperation. i love how the web can connect people, it
-          inspires me to get better and keep learning.
+          i'm a front-end developer who is driven by creativity and the challenge of creating beautiful, user-friendly web experiences.
         </p>
       </div>
     </transition>
