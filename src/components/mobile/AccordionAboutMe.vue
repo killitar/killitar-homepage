@@ -55,8 +55,8 @@ function toggleAccordionOpen(): void {
 .accordion-enter-active,
 .accordion-leave-active {
   transition:
-    max-height 0.4s ease-in-out,
-    opacity 0.3s ease-in-out;
+    max-height 0.2s ease-in-out,
+    opacity 0.1s ease-in-out;
 }
 
 .accordion-enter-from,
