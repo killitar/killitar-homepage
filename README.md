@@ -1,6 +1,6 @@
 # Killitar-homepage
 
-A personal website [Killitar](https://killitar-homepage.vercel.app/)
+A personal website [mirolinx](https://mirolinx-homepage.vercel.app/)
 
 ## 📦 Stack
 
