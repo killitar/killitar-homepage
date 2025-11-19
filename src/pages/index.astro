@@ -7,9 +7,24 @@ import SocialLinks from '@components/SocialLinks.vue'
 import ProjectsAccordion from '@components/ProjectsAccordion.vue'
 import AccordionAboutMe from '@components/mobile/AccordionAboutMe.vue'
 import Footer from '@components/Footer.vue'
+
+import listThemes from '../data/listThemes.json'
 ---
 
-<script is:inline src="/getInitialTheme.js"></script>
+<script is:inline define:vars={{ listThemes }}>
+  ;(function () {
+    const savedTheme = localStorage.getItem('user-theme')
+
+    if (savedTheme) {
+      document.documentElement.classList.add(savedTheme)
+    } else {
+      const randomIndex = Math.floor(Math.random() * listThemes.length)
+      const randomTheme = listThemes[randomIndex].name
+
+      document.documentElement.classList.add(randomTheme)
+    }
+  })()
+</script>
 
 <Layout title="Miroslav Lincovschi">
   <div class="min-w-screen min-h-screen px-8 py-12 delay-75 duration-300 ease-in-out lg:px-40">
