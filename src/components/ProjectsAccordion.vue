@@ -45,10 +45,8 @@ function toggleProjectsAccordion(): void {
     </button>
 
     <transition name="accordion">
-      <!-- Внешняя обертка для АНИМАЦИИ -->
       <div v-if="isProjectsAccordionOpen" id="projects-list" class="overflow-hidden">
         <hr class="border-1 my-2 border-secondary lg:hidden">
-        <!-- Внутренний контейнер для СКРОЛЛА и ограничения высоты -->
         <ul class="scrollbar-hide max-h-64 overflow-y-auto">
           <li
             v-for="project in listProjects"
