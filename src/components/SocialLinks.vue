@@ -8,13 +8,14 @@ import socialLinks from '../data/socialLinks.json'
            lg:justify-start lg:gap-6 lg:border-none lg:py-0 lg:text-primary-variant"
   >
     <a
-      v-for="link in socialLinks"
+      v-for="(link, index) in socialLinks"
       :key="link.name"
       :href="link.url"
       target="_blank"
       rel="noopener noreferrer"
-      class="group flex items-center duration-300 hover:text-secondary"
+      class="group flex items-center duration-300 hover:text-secondary animate-fade-up opacity-0"
       :aria-label="link.name"
+      :style="{ animationDelay: `${index * 150}ms` }"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -37,3 +38,20 @@ import socialLinks from '../data/socialLinks.json'
     </a>
   </div>
 </template>
+
+<style scoped>
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px); /* 1rem */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out forwards;
+}
+</style>
