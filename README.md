@@ -1,5 +1,3 @@
-# Killitar-homepage
-
 A personal website [mirolinx](https://mirolinx.vercel.app/)
 
 ## 📦 Stack
